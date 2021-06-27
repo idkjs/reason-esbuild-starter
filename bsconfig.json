@@ -1,6 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
-  "name": "rescript-esbuild-template",
+  "name": "reason-esbuild-template",
   "version": "0.0.1",
   "sources": {
     "dir": "src",

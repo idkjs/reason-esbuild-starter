@@ -1,9 +1,10 @@
 {
-  "name": "rescript-esbuild-template",
+  "name": "reason-esbuild-template",
   "version": "0.0.1",
   "scripts": {
-    "dev": "concurrently --names www,res,esb -c green.bold,red.bold,blue.bold --kill-others yarn:dev-server yarn:compile:watch yarn:bundle:watch",
+    "dev": "concurrently --names www,re,esb -c green.bold,red.bold,blue.bold --kill-others yarn:dev-server yarn:compile:watch yarn:bundle:watch",
     "compile": "bsb -make-world",
+    "watch": "bsb -make-world -w",
     "compile:watch": "NINJA_ANSI_FORCED=1 bsb -make-world -w",
     "bundle": "esbuild src/App.bs.js --outfile=www/dist/bundle.js --bundle --sourcemap --target=chrome58,firefox57,safari11,edge16 --define:process.env.NODE_ENV='\"development\"'",
     "bundle:watch": "yarn bundle --watch --color=true",
@@ -13,7 +14,7 @@
     "clean": "bsb -clean-world && rimraf www/dist"
   },
   "keywords": [
-    "rescript",
+    "reason",
     "esbuild"
   ],
   "author": "",
